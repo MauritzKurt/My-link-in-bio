@@ -1,56 +1,168 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <!-- where we tell the browser how to process the document: -->
-        <!-- what title to put in the browser tab -->
-        <!-- what style sheets to load -->
-        <!-- what language to use -->
-          <!-- we will always use a character set called UTF-8 -->
-          <!-- UTF-8 allows for all languages as well as things like emoji -->
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My link in bio</title>
+  <style>
+    body {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /*
+      .thumbnail-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }*/
+
+    .bwrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .banner-image {
+      width: 128px;
+      height: 128px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      object-fit: cover;
+      border-radius: 128px;
+    }
+
+    .name {
+      margin-bottom: 40px;
+    }
+
+    .egg-link {
+      position: relative;
+      width: 300px;
+      margin: 50px auto;
+    }
+
+    .egg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .wrapper {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      color: black;
+      width: 150px;
+      /* Adjust this based on the actual image size */
+      height: 150px;
+      /* Adjust this based on the actual image size */
+    }
+
+    .thumbnail-image {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+ 
+      top: 25px;
+      /* Centering the image in the wrapper */
+      left: 25px;
+      /* Centering the image in the wrapper */
+    }
+
+    .text-rotation {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      /* Adjust this to bring text closer to the top of the image */
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transform-origin: bottom center;
+      transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+      /* This rotation is to start placing text from the top center */
+    }
+
+    .text-rotation span {
+      display: block;
+      position: absolute;
+      left: 75px;
+      /* Adjust this based on the actual image size */
+      top: 100px;
+      /* Adjust this to alter the radius of the semi-circle */
+      transform-origin: 0 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="bwrapper">
+
     <div class="banner">
-      <img src="/thumbnails/silhouette.jpg" alt="Placeholder silhouette">
+      <img src="/thumbnails/silhouette.jpg" alt="Placeholder silhouette" class="banner-image">
     </div>
-  
+
     <div class="name">
       Kurt Mauritz
     </div>
-  
+
     <div class="social-icons">
       <a href="https://github.com/MauritzKurt" target="_blank">
         GitHub
       </a>
-  
+
       <a href="https://www.linkedin.com/in/mauritzkurt" target="_blank">
         LinkedIn
       </a>
     </div>
-  
-    <div class="link">
-      <img
-        src="">
-  
-      <a target="_blank" href="http://paulgraham.com/startupideas.html">How to Get Startup Ideas
-        — Paul Graham</a>
-    </div>
-  
-    <div class="link">
-      <img src="">
-  
-      <a target="_blank"
-        href="https://practicaltypography.com/typography-in-ten-minutes.html">Typography in ten minutes — Matthew
-        Butterick</a>
-    </div>
-  
-    <div class="link">
-      <img
-        src="https://media.newyorker.com/photos/59096d451c7a8e33fb38e4ca/16:9/w_1280,c_limit/071210_r16884_p646.jpg">
-  
-      <a target="_blank" href="https://www.newyorker.com/magazine/2007/12/10/the-checklist/">A
-        Life-Saving Checklist — The New Yorker</a>
-    </div>
-  
-    <!-- Etc, for as many links as you want -->
-  </body>
+
+    <!--<div class="egg-link">
+        <img src="/thumbnails/the_egg.jpg" alt="Big&little egg" class="thumbnail-image">
+          <div class="egg-text">
+            <a href="https://www.galactanet.com/oneoff/theegg_mod.html" style="text-decoration: none; color: black;" target="_blank">
+              <p style="display: inline-block; transform: rotate(-90deg);">The Egg - Andy Weir</p>
+          </div>
+        </a>-->
+
+    <a href="https://www.galactanet.com/oneoff/theegg_mod.html" class="wrapper">
+      <img src="/thumbnails/the_egg.jpg" alt="Big&little egg" class="thumbnail-image">
+      <div class="text-rotation">
+        <!-- Adjust the rotation for each letter -->
+        <span style="transform: rotate(0deg);">T</span>
+        <span style="transform: rotate(15deg);">h</span>
+        <span style="transform: rotate(30deg);">e</span>
+        <span style="transform: rotate(45deg);">&nbsp;</span> <!-- Space -->
+        <span style="transform: rotate(60deg);">E</span>
+        <span style="transform: rotate(75deg);">g</span>
+        <span style="transform: rotate(90deg);">g</span>
+        <span style="transform: rotate(105deg);">&nbsp;</span> <!-- Space -->
+        <span style="transform: rotate(120deg);">-</span>
+        <span style="transform: rotate(135deg);">&nbsp;</span> <!-- Space -->
+        <span style="transform: rotate(150deg);">A</span>
+        <span style="transform: rotate(165deg);">n</span>
+        <span style="transform: rotate(180deg);">d</span>
+        <span style="transform: rotate(195deg);">y</span>
+        <span style="transform: rotate(210deg);">&nbsp;</span> <!-- Space -->
+        <span style="transform: rotate(225deg);">W</span>
+        <span style="transform: rotate(240deg);">e</span>
+        <span style="transform: rotate(255deg);">i</span>
+        <span style="transform: rotate(270deg);">r</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Etc, for as many links as you want -->
+</body>
+
 </html>
