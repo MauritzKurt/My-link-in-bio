@@ -11,6 +11,7 @@
       padding-top: 40px;
       padding-bottom: 40px;
       display: flex;
+      font-size: 20px;
       justify-content: center;
     }
 
@@ -41,28 +42,15 @@
       margin-bottom: 40px;
     }
 
-    .egg-link {
-      position: relative;
-      width: 300px;
-      margin: 50px auto;
-    }
-
-    .egg-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
     .wrapper {
       display: inline-block;
       position: relative;
       text-decoration: none;
       color: black;
-      width: 150px;
+      margin: 50px;
+      width: 100px;
       /* Adjust this based on the actual image size */
-      height: 150px;
+      height: 100px;
       /* Adjust this based on the actual image size */
     }
 
@@ -70,10 +58,12 @@
       width: 100px;
       height: 100px;
       position: absolute;
+      object-fit: cover;
+      border-radius: 50%;
  
-      top: 25px;
+      top: 0px;
       /* Centering the image in the wrapper */
-      left: 25px;
+      left: 0px;
       /* Centering the image in the wrapper */
     }
 
@@ -88,18 +78,18 @@
       justify-content: center;
       flex-direction: column;
       transform-origin: bottom center;
-      transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+      transform: translateY(-50%) translateX(-50%) rotate(-135deg);
       /* This rotation is to start placing text from the top center */
     }
 
     .text-rotation span {
       display: block;
       position: absolute;
-      left: 75px;
+      left: 50%;
       /* Adjust this based on the actual image size */
-      top: 100px;
+      top: 75px;
       /* Adjust this to alter the radius of the semi-circle */
-      transform-origin: 0 0;
+      transform-origin: 0 75px;
     }
 
   </style>
@@ -153,7 +143,7 @@
         <span style="transform: rotate(180deg);">d</span>
         <span style="transform: rotate(195deg);">y</span>
         <span style="transform: rotate(210deg);">&nbsp;</span> <!-- Space -->
-        <span style="transform: rotate(225deg);">W</span>
+        <span style="transform: rotate(219deg);">W</span>
         <span style="transform: rotate(240deg);">e</span>
         <span style="transform: rotate(255deg);">i</span>
         <span style="transform: rotate(270deg);">r</span>
